@@ -6,6 +6,8 @@ import type {RootState} from './store'
 import { Link } from 'react-router-dom';
 
 export const App = () => {
+    const tg = (window as any).Telegram.WebApp;
+    console.error(tg)
     const count = useSelector((state: RootState) => {
         return state.counter.value
     });
@@ -20,7 +22,7 @@ export const App = () => {
         <div className="App">
             <div className="App-workspace">
                 <div className="App-workspace__label">
-                    Приложение 1
+                    {tg.initDataUnsafe.user.first_name}
                 </div>
                 <div className="App-workspace__label">
                     count is : {count}
@@ -45,7 +47,7 @@ export const App = () => {
             </Link>
             <div className="App-workspace">
                 <div className="App-workspace__label">
-                    Приложение 2
+                    {tg.initDataUnsafe.user.id}
                 </div>
                 <div className="App-workspace__label">
                     count is : {count2}
