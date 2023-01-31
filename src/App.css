@@ -9,7 +9,7 @@
 
 .App-workspace {
   display: flex;
-  width: 600px;
+  width: 400px;
   height: 300px;
   background-color: yellow;
   justify-content: space-around;
@@ -28,6 +28,6 @@
 }
 
 .buttons__item {
-  width: 100px;
-  height: 50px;
+  width: 50px;
+  height: 25px;
 }
